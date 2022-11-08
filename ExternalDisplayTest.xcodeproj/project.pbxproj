@@ -14,6 +14,8 @@
 		334F75022919E93B0014CAEB /* ExternalDisplayTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334F75012919E93B0014CAEB /* ExternalDisplayTestTests.swift */; };
 		334F750C2919E93B0014CAEB /* ExternalDisplayTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334F750B2919E93B0014CAEB /* ExternalDisplayTestUITests.swift */; };
 		334F750E2919E93B0014CAEB /* ExternalDisplayTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334F750D2919E93B0014CAEB /* ExternalDisplayTestUITestsLaunchTests.swift */; };
+		334F751C2919E9A00014CAEB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334F751B2919E9A00014CAEB /* SceneDelegate.swift */; };
+		334F751E2919E9AB0014CAEB /* ExternalSceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334F751D2919E9AB0014CAEB /* ExternalSceneDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +47,9 @@
 		334F75072919E93B0014CAEB /* ExternalDisplayTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExternalDisplayTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		334F750B2919E93B0014CAEB /* ExternalDisplayTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayTestUITests.swift; sourceTree = "<group>"; };
 		334F750D2919E93B0014CAEB /* ExternalDisplayTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalDisplayTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		334F751A2919E9810014CAEB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		334F751B2919E9A00014CAEB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		334F751D2919E9AB0014CAEB /* ExternalSceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExternalSceneDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +100,11 @@
 		334F74EE2919E93A0014CAEB /* ExternalDisplayTest */ = {
 			isa = PBXGroup;
 			children = (
+				334F751A2919E9810014CAEB /* Info.plist */,
 				334F74EF2919E93A0014CAEB /* ExternalDisplayTestApp.swift */,
 				334F74F12919E93A0014CAEB /* ContentView.swift */,
+				334F751B2919E9A00014CAEB /* SceneDelegate.swift */,
+				334F751D2919E9AB0014CAEB /* ExternalSceneDelegate.swift */,
 				334F74F32919E93B0014CAEB /* Assets.xcassets */,
 				334F74F52919E93B0014CAEB /* ExternalDisplayTest.entitlements */,
 				334F74F62919E93B0014CAEB /* Preview Content */,
@@ -261,6 +269,8 @@
 			files = (
 				334F74F22919E93A0014CAEB /* ContentView.swift in Sources */,
 				334F74F02919E93A0014CAEB /* ExternalDisplayTestApp.swift in Sources */,
+				334F751E2919E9AB0014CAEB /* ExternalSceneDelegate.swift in Sources */,
+				334F751C2919E9A00014CAEB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +429,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExternalDisplayTest/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -437,10 +448,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fit.katalyst.ExternalDisplayTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -457,6 +470,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ExternalDisplayTest/Info.plist;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -475,10 +489,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = fit.katalyst.ExternalDisplayTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
