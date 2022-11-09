@@ -2,6 +2,7 @@ import SwiftUI
 
 class ExternalSceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    var window: UIWindow?
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     guard let windowScene = scene as? UIWindowScene else {
       return
@@ -20,6 +21,10 @@ class ExternalSceneDelegate: UIResponder, UIWindowSceneDelegate {
     print("nativeBounds", screen.nativeBounds)
 //    print("nativeScale", screen.nativeScale)
 //    print("scale", screen.scale)
+      
+      window = UIWindow(windowScene: windowScene)
+      window!.backgroundColor = .red
+      window!.isHidden = false
   }
 }
 
